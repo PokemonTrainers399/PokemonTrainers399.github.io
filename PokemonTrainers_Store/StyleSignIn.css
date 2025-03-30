@@ -1,0 +1,62 @@
+body {
+    background-image: url('6R0Q1DU.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Alfa Slab One', cursive;
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 50px auto;
+    margin-top: 200px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Galindo', cursive;
+    font-weight: bold;
+    color: #5AA6A6;
+}
+
+.player-id-message {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #5AA6A6;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-control {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.btn-success {
+    background-color: #5AA6A6;
+    border: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-family: 'Galindo', cursive;
+    transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #264653;
+    font-family: 'Galindo', cursive;
+    color: white;
+}
