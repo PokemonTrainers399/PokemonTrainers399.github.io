@@ -12,7 +12,7 @@ body{
 }
 
 .container img{
-    width: 10%;
+    width: 50%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
@@ -21,32 +21,5 @@ body{
 }
 
 .container img:hover{
-    width: 25%;
-}
-
-a{
-    text-decoration: none;
-    color: white;
-    text-transform: none;
-    transition: 0.25s ease;
-}
-
-ul{
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-}
-
-ul li{
-    text-decoration: none;
-    margin: 0 0.75em 0 0.75em;
-}
-
-ul:hover a {
-    color: #575757;
-}
-
-ul:hover a:hover {
-    color: #8EAAFB;
-    box-shadow: 0 2px 0 0 cu;
+    width: 100%;
 }

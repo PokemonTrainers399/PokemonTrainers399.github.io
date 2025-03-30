@@ -8,55 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Titan+One&display=swap" rel="stylesheet">
-    <style>
-        .top-banner {
-            background-color: #5AA6A6;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            font-weight: bold;
-            font-family: 'Titan One', cursive;
-        }
-        .navbar {
-            background-color: #F1F1F1;
-            padding: 15px;
-        }
-        .navbar-brand img {
-            height: 40px;
-        }
-        .navbar-brand {
-            font-family: 'Alfa Slab One', cursive;
-        }
-        .content {
-            height: 400px;
-            background-color: white;
-        }
-        .navbar-nav .btn-success {
-            background-color: #5AA6A6;
-            border: none;
-            font-weight: bold;
-        }
-        .navbar-nav .btn-success:hover {
-            background-color: #8EAAFB;
-            color: white;
-        }
-        ul li {
-            text-decoration: none;
-            margin: 0 0.75em 0 0.75em;
-        }
-        ul:hover a:hover {
-            color: #8EAAFB;
-            box-shadow: 0 2px 0 0 cu;
-        }
-        ul:hover a {
-            color: #333;
-            text-decoration: none;
-        }
-        ul:hover li {
-            text-decoration: none;
-            margin: 0 0.75em 0 0.75em;
-        }
-    </style>
+    <link rel="stylesheet" href="Style.css">    
 </head>
 <body>
     <div class="top-banner">
@@ -85,7 +37,7 @@
         <div class="container">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Featured</a>
+                    <a class="nav-link" href="#">Events</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Item Boxes</a>
@@ -99,6 +51,29 @@
             </ul>
         </div>
     </nav>
+
+    <!-- Events Section -->
+    <div class="container mt-4">
+        <h2 class="text-center">Events</h2>
+        <div class="card-group">
+            <div class="card">
+                <img src="https://lh3.googleusercontent.com/WzvKMzgpZsVjfJa8u7ED04ZGkMpzpxXvp3cgWtDXqybnnxUS-Q8s4hzi1WRx4HHwhfpXq_L1kofatpF809uHV7k4TFcjz8XxT_L_dY_xxkXY13A=w1440-e365">
+                <div class="layer"></div>
+                <div class="info">
+                    <h1>Power Up Ticket: April is coming soon!</h1>
+                    <a href="https://pokemongolive.com/post/power-up-ticket-april-2025" target="_blank" class="btn">More Info</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://lh3.googleusercontent.com/nbjASAYzeBHtYV62EkC0ZL7j5NfSR-LNZQwy7ZtqIzBb3yeatWD3w2_OB3FdQSP-RlKJPvZGVwF3O-Y_MRdyO5wpKQly9k-v09qLZIhNttmp4Q=w1440-e365">
+                <div class="layer"></div>
+                <div class="info">
+                    <h1>The Bug Out event returns, featuring Sizzlipede’s Pokémon GO debut!</h1>
+                    <a href="https://pokemongolive.com/post/bug-out-2025" target="_blank" class="btn">More Info</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
