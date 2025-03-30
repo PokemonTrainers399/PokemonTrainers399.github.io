@@ -1,63 +1,215 @@
-/* Existing styles */
+.body-background {
+    background-image: url('EaiLNR-XkAEsgIm.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #fff;
+    min-height: 100vh;
+    font-family: 'Alfa Slab One', 'Titan One', sans-serif;
+    padding-bottom: 20px;
+}
+
+.section-titles {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2em;
+    color: #fff;
+    letter-spacing: 2px;
+    
+    text-shadow: 0 0 0 #000000, 3.5px 0 0 #000080, -3.5px 0 0 #000080, 0 3.5px 0 #000080, 0 -3.5px 0 #000080, 3.5px 3.5px 0 #000080, -3.5px -3.5px 0 #000080, 3.5px -3.5px 0 #000080, -3.5px 3.5px 0 #000080, 2px 2px 6px rgba(0, 0, 0, 0.5), 4px 4px 8px rgba(0, 0, 0, 0.7);
+}
+
 .top-banner {
     background-color: #5AA6A6;
     color: white;
     text-align: center;
-    padding: 10px;
-    font-weight: bold;
-    font-family: 'Titan One', cursive;
-}
-.navbar {
-    background-color: #F1F1F1;
     padding: 15px;
-}
-.navbar-brand img {
-    height: 40px;
-}
-.navbar-brand {
-    font-family: 'Alfa Slab One', cursive;
-}
-.content {
-    height: 400px;
-    background-color: white;
-}
-.navbar-nav .btn-success {
-    background-color: #5AA6A6;
-    border: none;
     font-weight: bold;
-}
-.navbar-nav .btn-success:hover {
-    background-color: #8EAAFB;
-    color: white;
-}
-ul li {
-    text-decoration: none;
-    margin: 0 0.75em 0 0.75em;
-}
-ul:hover a:hover {
-    color: #8EAAFB;
-    box-shadow: 0 2px 0 0 cu;
-}
-ul:hover a {
-    color: #333;
-    text-decoration: none;
-}
-ul:hover li {
-    text-decoration: none;
-    margin: 0 0.75em 0 0.75em;
+    font-family: 'Galindo', cursive;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-/* EventsStyles.css content */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    position: sticky;
+    top: 50px;
+    z-index: 999;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 24px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.navbar-brand img {
+    height: 40px;
+    width: auto;
+}
+
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.navbar-nav .nav-link {
+    color: #333;
+    font-weight: bold;
+    margin: 0 10px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #8EAAFB;
+    text-decoration: underline;
+}
+
+.navbar-nav .btn-success {
+    background-color: #5AA6A6;
+    color: white;
+    border: none;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    font-family: 'Galindo', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-nav .btn-success:hover {
+    background-color: #264653;
+    letter-spacing: 1px;
+    color: white;
+    font-family: 'Galindo', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.sub-navbar {
+    background-color: #ffffff;
+    padding: 15px 0;
+    position: sticky;
+    top: calc(50px + 80px);
+    z-index: 997;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-navbar .nav-link {
+    color: #333;
+    font-weight: bold;
+    margin: 0 15px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.sub-navbar .nav-link:hover {
+    color: #5AA6A6;
+    text-decoration: underline;
+}
+
+.custom-carousel {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.custom-carousel .carousel-indicators button {
+    background-color: #007bff;
+    border: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 10px;
+    margin-top: 10px;
+}
+
+.custom-carousel .carousel-indicators .active {
+    background-image: url('pokeball-icon-512x512-gg20zbmv.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25px;
+    height: 25px;
+}
+
+.custom-carousel .carousel-inner {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.custom-carousel .carousel-item img {
+    max-height: 400px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.custom-carousel .carousel-caption {
+    padding: 10px;
+    border-radius: 5px;
+    color: #ffffff;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    text-align: left;
+    font-size: 30px;
+    text-shadow: 0 0 0 #000000, 3.5px 0 0 #000080, -3.5px 0 0 #000080, 0 3.5px 0 #000080, 0 -3.5px 0 #000080, 3.5px 3.5px 0 #000080, -3.5px -3.5px 0 #000080, 3.5px -3.5px 0 #000080, -3.5px 3.5px 0 #000080, 2px 2px 6px rgba(0, 0, 0, 0.5), 4px 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.custom-carousel .carousel-control-prev-icon,
+.custom-carousel .carousel-control-next-icon {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.custom-carousel .carousel-control-prev,
+.custom-carousel .carousel-control-next {
+    width: 5%;
+}
+
 body {
     background: url('bg_img.jpg') no-repeat center center fixed;
     background-size: cover;
 }
+
 .card-group {
     display: flex;
     gap: 25px;
     margin-top: 20px;
     justify-content: center;
 }
+
 .card {
     width: 225px;
     height: 400px;
@@ -67,6 +219,7 @@ body {
     transition: 0.5s;
     cursor: pointer;
 }
+
 .card img {
     width: 100%;
     height: 100%;
@@ -74,6 +227,7 @@ body {
     pointer-events: none;
     transition: 0.5s;
 }
+
 .card .layer {
     background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     position: absolute;
@@ -83,17 +237,21 @@ body {
     opacity: 0;
     transition: 0.3s;
 }
+
 .card .info {
     position: absolute;
+    color: white;
     bottom: -50%;
     padding: 15px;
     opacity: 0;
     transition: 0.5s bottom, 1.7s opacity;
 }
+
 .info p {
     font-size: 14px;
     margin-top: 3px;
 }
+
 .info a {
     background: #5AA6A6;
     border: none;
@@ -106,27 +264,30 @@ body {
     display: inline-block;
     transition: 0.3s;
 }
+
 .card:hover,
 .card:hover img {
     transform: scale(1.1);
 }
+
 .card:hover > .layer {
     opacity: 1;
 }
+
 .card:hover > .info {
     bottom: 0;
     opacity: 1;
 }
+
 .card-group:hover > .card:not(:hover) {
     filter: blur(5px);
 }
 
-/* Item Boxes Section Styles */
 .custom-card {
     background-color: #e8f5f5;
     border: none;
-    border-radius: 20px; 
-    overflow: hidden; 
+    border-radius: 20px;
+    overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
@@ -135,23 +296,28 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 .card-img-container {
     background-color: #2a9d8f;
     padding: 100px;
 }
+
 .card-body {
     padding: 20px;
     text-align: center;
 }
+
 .card-title {
     font-size: 16px;
     font-weight: bold;
     color: #264653;
 }
+
 .card-text {
     font-size: 14px;
     color: #6c757d;
 }
+
 .btn-price {
     background-color: #264653;
     color: white;
@@ -164,15 +330,15 @@ body {
     transition: background-color 0.3s ease;
 }
 
-@media (max-width: 576px) { /* For phones and small screens */
+@media (max-width: 576px) {
     .custom-card {
         max-width: 100%;
-        height: auto; 
+        height: auto;
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding: 10px; 
-        gap: 10px; 
+        padding: 10px;
+        gap: 10px;
         border-radius: 15px;
     }
 
@@ -192,7 +358,7 @@ body {
 
     .card-body {
         flex: 1;
-        padding: 0; 
+        padding: 0;
         text-align: left;
     }
 
@@ -210,7 +376,7 @@ body {
     .btn-price {
         background-color: #2a9d8f;
         color: white;
-        padding: 6px 12px; 
+        padding: 6px 12px;
         font-size: 12px;
         border-radius: 10px;
         text-align: center;
