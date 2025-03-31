@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Pokemon GO Web Store</title>
+    <link rel="icon" href="pokeball.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Galindo&family=Titan+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="StyleSignUp.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2 class="form-title">Create Account</h2>
+        <form id="signUpForm">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username / In-game Name</label>
+                <input type="text" class="form-control" id="username" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" required>
+                <div class="password-requirements">
+                    Password must be at least 8 characters long
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="confirm-password" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="confirm-password" required>
+                <div id="passwordError" class="error-message">
+                    Passwords do not match!
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Sign Up</button>
+        </form>
+        <div class="text-center">
+            <p>Already have an account? <a href="SignIn.html" class="text-success">Sign In</a></p>
+        </div>
+    </div>
+
+    <script>
+        const signUpForm = document.getElementById('signUpForm');
+        const password = document.getElementById('password');
+        const confirmPassword = document.getElementById('confirm-password');
+        const passwordError = document.getElementById('passwordError');
+
+        // Store users in localStorage
+        let users = JSON.parse(localStorage.getItem('users')) || [];
+
+        confirmPassword.addEventListener('input', () => {
+            if (password.value !== confirmPassword.value) {
+                passwordError.style.display = 'block';
+                confirmPassword.setCustomValidity('Passwords do not match');
+            } else {
+                passwordError.style.display = 'none';
+                confirmPassword.setCustomValidity('');
+            }
+        });
+
+        signUpForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            if (password.value !== confirmPassword.value) {
+                passwordError.style.display = 'block';
+                return;
+            }
+
+            const newUser = {
+                username: document.getElementById('username').value,
+                email: document.getElementById('email').value,
+                password: document.getElementById('password').value
+            };
+
+            // Check if username or email already exists
+            const userExists = users.some(user => 
+                user.username === newUser.username || 
+                user.email === newUser.email
+            );
+
+            if (userExists) {
+                alert('Username or email already exists!');
+                return;
+            }
+
+            // Add new user
+            users.push(newUser);
+            localStorage.setItem('users', JSON.stringify(users));
+
+            alert('Account created successfully!');
+            window.location.href = 'SignIn.html';
+        });
+    </script>
+</body>
+</html>

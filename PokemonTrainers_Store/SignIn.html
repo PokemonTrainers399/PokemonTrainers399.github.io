@@ -14,49 +14,52 @@
     <div class="form-container">
         <h2 class="form-title">Sign In</h2>
         <form id="signInForm">
-
             <div class="mb-3">
-                <label for="email" class="form-label">E-mail Address</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                <label for="username" class="form-label">Username / In-Game Name</label>
+                <input type="text" class="form-control" id="username" required>
             </div>
 
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
-            </div>
-
-            <div class="mb-3">
-                <label for="confirm-password" class="form-label">Confirm Password</label>
-                <input type="password" class="form-control" id="confirm-password" placeholder="Confirm your password" required>
-            </div>
-
-            <div class="mb-3">
-                <label for="ign" class="form-label">In-Game Name (IGN)</label>
-                <input type="text" class="form-control" id="ign" placeholder="Enter your in-game name" required>
+                <input type="password" class="form-control" id="password" required>
+                <div id="loginError" class="error-message">
+                    Invalid username or password!
+                </div>
             </div>
 
             <button type="submit" class="btn btn-success w-100">Sign In</button>
         </form>
-
-        <div id="playerIdMessage" class="player-id-message">
-            Your Player ID is: <span id="revealedPlayerId"></span>
+        <div class="text-center mt-3">
+            <p>Don't have an account? <a href="SignUp.html" class="text-success">Sign Up</a></p>
         </div>
     </div>
 
     <script>
-        const generatePlayerId = () => {
-            return Array.from({ length: 3 }, () => Math.floor(1000 + Math.random() * 9000)).join(' ');
-        };
+        const signInForm = document.getElementById('signInForm');
+        const loginError = document.getElementById('loginError');
 
-        const form = document.getElementById('signInForm');
-        const playerIdMessage = document.getElementById('playerIdMessage');
-        const revealedPlayerId = document.getElementById('revealedPlayerId');
+        signInForm.addEventListener('submit', (e) => {
+            e.preventDefault();
 
-        form.addEventListener('submit', (event) => {
-            event.preventDefault(); 
-            const playerId = generatePlayerId();
-            revealedPlayerId.textContent = playerId;
-            playerIdMessage.style.display = 'block';
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Get stored users
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+
+            // Find matching user
+            const user = users.find(u => 
+                (u.username === username || u.email === username) && 
+                u.password === password
+            );
+
+            if (user) {
+                // Store current user info
+                localStorage.setItem('currentUser', JSON.stringify(user));
+                window.location.href = 'userHome.html';
+            } else {
+                loginError.style.display = 'block';
+            }
         });
     </script>
 </body>

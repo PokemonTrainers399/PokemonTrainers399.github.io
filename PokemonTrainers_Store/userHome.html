@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon GO Web Store</title>
+    <link rel="icon" href="pokeball.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Galindo&family=Titan+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="StyleIndex.css">    
+</head>
+<body>
+    <body class="body-background">
+    <div class="top-banner">
+        15% discount for your first Web Store purchase on any item $9.99 or more!
+    </div>
+    <nav class="navbar main-navbar navbar-expand-lg fixed-top bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="pokemon_logo.png" alt="Pokemon GO Logo"> Web Store
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Code Redemption</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Event Ticketing</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown">
+                            <span id="username-display">Loading...</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Purchase History</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#" id="signOutBtn">Sign Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel Section -->
+    <div id="carouselSection" class="container mt-4">
+        <div id="featuredCarousel" class="carousel slide custom-carousel" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#featuredCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="1024947.jpg" class="d-block w-100" alt="Featured Item 1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Power Up Ticket Ultra Box</h5>
+                        <p>₱289.00 - Limited Time Offer</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="pokestop.jpg" class="d-block w-100" alt="Featured Item 2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>PokeCoins Pack 2</h5>
+                        <p>₱249.00 - Get 550 PokeCoins</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="wallpapersden.com_pokemon-go-pokeball-game_3840x2160.jpg" class="d-block w-100" alt="Featured Item 3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>PokeCoins Pack 3</h5>
+                        <p>₱499.00 - Get 1200 PokeCoins</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <nav class="navbar sub-navbar">
+        <div class="container d-flex justify-content-center">
+            <ul class="navbar-nav d-flex flex-row">
+                <li class="nav-item mx-lg-5">
+                    <a class="nav-link2" href="#events-section">Events</a>
+                </li>
+                <li class="nav-item mx-lg-5">
+                    <a class="nav-link2" href="#item-boxes-section">Item Boxes</a>
+                </li>
+                <li class="nav-item mx-lg-5">
+                    <a class="nav-link2" href="#pokecoins-section">PokéCoins</a>
+                </li>
+                <li class="nav-item mx-lg-4"></li>
+                    <a class="nav-link2" href="#">Daily Bundles</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Events Section -->
+    <div id="events-section" class="container mt-4">
+        <h2 class="section-titles">Events</h2>
+        <div class="card-group">
+            <div class="card">
+                <img src="https://lh3.googleusercontent.com/WzvKMzgpZsVjfJa8u7ED04ZGkMpzpxXvp3cgWtDXqybnnxUS-Q8s4hzi1WRx4HHwhfpXq_L1kofatpF809uHV7k4TFcjz8XxT_L_dY_xxkXY13A=w1440-e365">
+                <div class="layer"></div>
+                <div class="info">
+                    <h1>Power Up Ticket: April is coming soon!</h1>
+                    <a href="https://pokemongolive.com/post/power-up-ticket-april-2025" target="_blank" class="btn">More Info</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://lh3.googleusercontent.com/nbjASAYzeBHtYV62EkC0ZL7j5NfSR-LNZQwy7ZtqIzBb3yeatWD3w2_OB3FdQSP-RlKJPvZGVwF3O-Y_MRdyO5wpKQly9k-v09qLZIhNttmp4Q=w1440-e365">
+                <div class="layer"></div>
+                <div class="info">
+                    <h1>The Bug Out event returns, featuring Sizzlipede’s Pokémon GO debut!</h1>
+                    <a href="https://pokemongolive.com/post/bug-out-2025" target="_blank" class="btn">More Info</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Item Boxes Section -->
+    <div id="item-boxes-section" class="container mt-4">
+        <h2 class="section-titles">Item Boxes</h2>
+        <div class="row justify-content-center">
+            <!-- Card 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card text-center custom-card" data-bs-toggle="modal" data-bs-target="#itemBoxModal1">
+                    <div class="card-img-container">
+                        <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fbundle.general1.rocket.1.png&w=256&q=75" class="card-img-top" alt="Item Box">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Bug Out Ultra Ticket Box</h5>
+                        <p class="card-text">Can only be purchased 1 time.</p>
+                        <a href="payment.html" class="btn btn-price"><strong>₱49.00</strong></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card text-center custom-card" data-bs-toggle="modal" data-bs-target="#itemBoxModal1">
+                    <div class="card-img-container">
+                        <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fbundle.general1.rocket.1.png&w=256&q=75" class="card-img-top" alt="Item Box">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Bug Out Ultra Ticket Box</h5>
+                        <p class="card-text">Can only be purchased 1 time.</p>
+                        <a href="payment.html" class="btn btn-price"><strong>₱49.00</strong></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card text-center custom-card" data-bs-toggle="modal" data-bs-target="#itemBoxModal1">
+                    <div class="card-img-container">
+                        <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fbundle.general1.rocket.1.png&w=256&q=75" class="card-img-top" alt="Item Box">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Bug Out Ultra Ticket Box</h5>
+                        <p class="card-text">Can only be purchased 1 time.</p>
+                        <a href="payment.html" class="btn btn-price"><strong>₱49.00</strong></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       <!-- Modal for Item Box 1 -->
+<div class="modal fade" id="itemBoxModal1" tabindex="-1" aria-labelledby="itemBoxModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom-modal">
+            <div class="modal-header border-0">
+                <h5 class="modal-title" id="itemBoxModal1Label">Bug Out Ultra Ticket Box</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <p class="text-muted">Can only be purchased 1 time</p>
+                <div class="modal-image-container">
+                    <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fbundle.general1.rocket.1.png&w=256&q=75" alt="Item Box" class="img-fluid mb-3">
+                </div>
+                <ul class="list-unstyled modal-item-list">
+                    <li><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_ultra_ball.png&w=96&q=75" alt="Ultra Ball" class="icon"> x7 Ultra Ball</li>
+                    <li><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_leader_map.png&w=96&q=75" alt="Rocket Radar" class="icon"> x7 Ro    cket Radar</li>
+                    <li><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_paid_raid_ticket.png&w=96&q=75" alt="Premium Battle Pass" class="icon"> x7 Premium Battle Pass</li>
+                    <li><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_golden_pinap_berry.png&w=96&q=75" alt="Silver Pinap Berry" class="icon"> x7 Silver Pinap Berry</li>
+                </ul>
+                <a href="payment.html" class="btn btn-price mt-3"><strong>₱49.00</strong></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="itemBoxModal1" tabindex="-1" aria-labelledby="itemBoxModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom-modal">
+            <div class="modal-header border-0">
+                <h5 class="modal-title" id="itemBoxModal1Label">Bug Out Ultra Ticket Box</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <p class="text-muted">Can only be purchased 1 time</p>
+                <div class="modal-image-container">
+                    <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fbundle.general1.rocket.1.png&w=256&q=75" alt="Item Box" class="img-fluid mb-3">
+                </div>
+                <ul class="list-unstyled modal-item-list">
+                    <li><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_ultra_ball.png&w=96&q=75" alt="Ultra Ball" class="icon"> x7 Ultra Ball</li>
+                    <li><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_leader_map.png&w=96&q=75" alt="Rocket Radar" class="icon"> x7 Ro    cket Radar</li>
+                    <li><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_paid_raid_ticket.png&w=96&q=75" alt="Premium Battle Pass" class="icon"> x7 Premium Battle Pass</li>
+                    <li><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_golden_pinap_berry.png&w=96&q=75" alt="Silver Pinap Berry" class="icon"> x7 Silver Pinap Berry</li>
+                </ul>
+                <a href="payment.html" class="btn btn-price mt-3"><strong>₱49.00</strong></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="itemBoxModal1" tabindex="-1" aria-labelledby="itemBoxModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom-modal">
+            <div class="modal-header border-0">
+                <h5 class="modal-title" id="itemBoxModal1Label">Bug Out Ultra Ticket Box</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <p class="text-muted">Can only be purchased 1 time</p>
+                <div class="modal-image-container">
+                    <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fbundle.general1.rocket.1.png&w=256&q=75" alt="Item Box" class="img-fluid mb-3">
+                </div>
+                <ul class="list-unstyled modal-item-list">
+                    <li><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_ultra_ball.png&w=96&q=75" alt="Ultra Ball" class="icon"> x7 Ultra Ball</li>
+                    <li><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_leader_map.png&w=96&q=75" alt="Rocket Radar" class="icon"> x7 Ro    cket Radar</li>
+                    <li><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_paid_raid_ticket.png&w=96&q=75" alt="Premium Battle Pass" class="icon"> x7 Premium Battle Pass</li>
+                    <li><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_golden_pinap_berry.png&w=96&q=75" alt="Silver Pinap Berry" class="icon"> x7 Silver Pinap Berry</li>
+                </ul>
+                <a href="payment.html" class="btn btn-price mt-3"><strong>₱49.00</strong></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="itemBoxModal1" tabindex="-1" aria-labelledby="itemBoxModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom-modal">
+            <div class="modal-header border-0">
+                <h5 class="modal-title" id="itemBoxModal1Label">Bug Out Ultra Ticket Box</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <p class="text-muted">Can only be purchased 1 time</p>
+                <div class="modal-image-container">
+                    <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fbundle.general1.rocket.1.png&w=256&q=75" alt="Item Box" class="img-fluid mb-3">
+                </div>
+                <ul class="list-unstyled modal-item-list">
+                    <li><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_ultra_ball.png&w=96&q=75" alt="Ultra Ball" class="icon"> x7 Ultra Ball</li>
+                    <li><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_leader_map.png&w=96&q=75" alt="Rocket Radar" class="icon"> x7 Ro    cket Radar</li>
+                    <li><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_paid_raid_ticket.png&w=96&q=75" alt="Premium Battle Pass" class="icon"> x7 Premium Battle Pass</li>
+                    <li><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_golden_pinap_berry.png&w=96&q=75" alt="Silver Pinap Berry" class="icon"> x7 Silver Pinap Berry</li>
+                </ul>
+                <a href="payment.html" class="btn btn-price mt-3"><strong>₱49.00</strong></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- PokeCoins Section -->
+        <div id="pokecoins-section" class="container mt-4">
+            <h2 class="section-titles">PokeCoins</h2>
+            <div class="row justify-content-center">
+                <!-- Card 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center custom-card" data-bs-toggle="modal" data-bs-target="#pokeCoinsModal1">
+                        <div class="card-img-container">
+                            <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fcoin-bundle-xxsmall.png&w=384&q=75" class="card-img-top" alt="PokeCoins">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">110 PokéCoins</h5>
+                            <a href="payment.html" class="btn btn-price"><strong>₱29.00</strong></a>
+                        </div>
+                    </div>
+                </div>
+            <!-- Card 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card text-center custom-card" data-bs-toggle="modal" data-bs-target="#pokeCoinsModal1">
+                    <div class="card-img-container">
+                        <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fcoin-bundle-xxsmall.png&w=384&q=75" class="card-img-top" alt="PokeCoins">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">110 PokéCoins</h5>
+                        <a href="payment.html" class="btn btn-price"><strong>₱29.00</strong></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card text-center custom-card" data-bs-toggle="modal" data-bs-target="#pokeCoinsModal1">
+                    <div class="card-img-container">
+                        <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fcoin-bundle-xxsmall.png&w=384&q=75" class="card-img-top" alt="PokeCoins">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">110 PokéCoins</h5>
+                        <a href="payment.html" class="btn btn-price"><strong>₱29.00</strong></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Modal for PokeCoins -->
+        <div class="modal fade" id="pokeCoinsModal1" tabindex="-1" aria-labelledby="pokeCoinsModal1Label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content custom-modal">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title" id="pokeCoinsModal1Label">110 PokéCoins</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fcoin-bundle-xxsmall.png&w=384&q=75" alt="PokeCoins" class="img-fluid mb-3">
+                        <p class="card-text">10 Web Store Bonus Coins</p>
+                        <p class="card-text">100 + 10 Web Store Bonus = 110 total PokéCoins.</p>
+                        <a href="payment.html" class="btn btn-price mt-3"><strong>₱29.00</strong></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="pokeCoinsModal1" tabindex="-1" aria-labelledby="pokeCoinsModal1Label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content custom-modal">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title" id="pokeCoinsModal1Label">110 PokéCoins</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fcoin-bundle-xxsmall.png&w=384&q=75" alt="PokeCoins" class="img-fluid mb-3">
+                        <p class="card-text">10 Web Store Bonus Coins</p>
+                        <p class="card-text">100 + 10 Web Store Bonus = 110 total PokéCoins.</p>
+                        <a href="payment.html" class="btn btn-price mt-3"><strong>₱29.00</strong></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="modal fade" id="pokeCoinsModal1" tabindex="-1" aria-labelledby="pokeCoinsModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content custom-modal">
+            <div class="modal-header border-0">
+                <h5 class="modal-title" id="pokeCoinsModal1Label">110 PokéCoins</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fcoin-bundle-xxsmall.png&w=384&q=75" alt="PokeCoins" class="img-fluid mb-3">
+                <p class="card-text">10 Web Store Bonus Coins</p>
+                <p class="card-text">100 + 10 Web Store Bonus = 110 total PokéCoins.</p>
+                <a href="payment.html" class="btn btn-price mt-3"><strong>₱29.00</strong></a>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            if (!currentUser) {
+                window.location.href = 'SignIn.html';
+                return;
+            }
+    
+            // Display username
+            document.getElementById('username-display').textContent = currentUser.username;
+    
+            // Handle sign out
+            document.getElementById('signOutBtn').addEventListener('click', () => {
+                localStorage.removeItem('currentUser');
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+</body>
+</html>
