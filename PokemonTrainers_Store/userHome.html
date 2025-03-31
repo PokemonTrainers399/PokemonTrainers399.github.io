@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Galindo&family=Titan+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="StyleIndex.css">    
+    <link rel="stylesheet" href="StyleIndex.css">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <body class="body-background">
@@ -35,6 +36,10 @@
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="#">Profile</a></li>
                             <li><a class="dropdown-item" href="#">Purchase History</a></li>
+                            <li><a class="dropdown-item" href="cart.html">
+                                <i class="fas fa-shopping-cart"></i> Cart
+                                <span id="cart-count" class="badge bg-success">0</span>
+                            </a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#" id="signOutBtn">Sign Out</a></li>
                         </ul>
@@ -380,5 +385,80 @@
             });
         });
     </script>
+
+    <!-- Add this before the closing body tag -->
+<script>
+    // Function to store item details and redirect to payment
+    function goToPayment(item) {
+        localStorage.setItem('selectedItem', JSON.stringify(item));
+        window.location.href = 'payment.html';
+    }
+
+    // Add click handlers to all product cards
+    document.querySelectorAll('.custom-card').forEach(card => {
+        card.querySelector('.btn-price').addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const itemDetails = {
+                name: card.querySelector('.card-title').textContent,
+                description: card.querySelector('.card-text')?.textContent || '',
+                price: card.querySelector('.btn-price strong').textContent,
+                image: card.querySelector('.card-img-top').src
+            };
+            
+            goToPayment(itemDetails);
+        });
+    });
+
+    // Add click handlers to modal buy buttons
+    document.querySelectorAll('.modal .btn-price').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const modal = btn.closest('.modal');
+            
+            const itemDetails = {
+                name: modal.querySelector('.modal-title').textContent,
+                description: modal.querySelector('.card-text')?.textContent || '',
+                price: btn.querySelector('strong').textContent,
+                image: modal.querySelector('.img-fluid').src
+            };
+            
+            goToPayment(itemDetails);
+        });
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Update cart count
+        function updateCartCount() {
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            document.getElementById('cart-count').textContent = cartItems.length;
+        }
+
+        // Add to cart functionality
+        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const card = e.target.closest('.card');
+                const item = {
+                    name: card.querySelector('.card-title').textContent,
+                    description: card.querySelector('.card-text').textContent,
+                    price: card.querySelector('.btn-price strong').textContent,
+                    image: card.querySelector('.card-img-top').src
+                };
+
+                const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+                cartItems.push(item);
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                
+                updateCartCount();
+                alert('Item added to cart!');
+            });
+        });
+
+        // Initialize cart count
+        updateCartCount();
+    });
+</script>
 </body>
 </html>

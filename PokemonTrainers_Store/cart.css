@@ -1,0 +1,49 @@
+body {
+    font-family: 'Galindo', cursive;
+    background-color: #f8f9fa;
+}
+
+.navbar-brand img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.cart-items {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.cart-item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.cart-summary {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-outline-success {
+    border-color: #1a9c3b;
+    color: #1a9c3b;
+}
+
+.btn-outline-success:hover {
+    background-color: #1a9c3b;
+    color: white;
+}
+
+.btn-success {
+    background-color: #1a9c3b;
+    border-color: #1a9c3b;
+}
+
+.btn-success:hover {
+    background-color: #147c2f;
+    border-color: #147c2f;
+}

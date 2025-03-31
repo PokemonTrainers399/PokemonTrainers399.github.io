@@ -1,0 +1,112 @@
+body {
+    font-family: 'Galindo', cursive;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+.checkout-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+.store-title {
+    color: #1a9c3b;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+
+.navigation-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.nav-button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: 'Galindo', cursive;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid #1a9c3b;
+}
+.nav-button.store {
+    background: white;
+    color: #1a9c3b;
+}
+
+.nav-button.confirm {
+    background: #1a9c3b;
+    color: white;
+}
+
+.nav-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(26, 156, 59, 0.2);
+}
+.order-summary {
+    background: #f8fff9;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+}
+.item-image {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+.payment-methods {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+.payment-method {
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 15px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.payment-method.active {
+    border-color: #1a9c3b;
+    background: #f8fff9;
+}
+.payment-method img {
+    height: 24px;
+    width: auto;
+}
+.form-control {
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.card-icons {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.card-icons img {
+    height: 20px;
+    margin-left: 5px;
+}
+.pay-button {
+    background: #1a9c3b;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+.pay-button:hover {
+    background: #147c2f;
+}
+.save-card {
+    margin-top: 15px;
+}
+
