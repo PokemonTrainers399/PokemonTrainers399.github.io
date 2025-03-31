@@ -1,27 +1,33 @@
 body {
-    background: linear-gradient(135deg, #1a9c3b 0%, #115740 100%);
+    background-image: url('6R0Q1DU.jpeg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #fff;
     min-height: 100vh;
+    font-family: 'Alfa Slab One', 'Titan One', sans-serif;
+    padding-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Galindo', cursive;
 }
 
 .form-container {
     background: white;
-    padding: 2rem;
+    padding: 40px;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     margin: 2rem auto;
 }
 
 .form-title {
-    color: #1a9c3b;
+    color: #5AA6A6; 
     text-align: center;
     margin-bottom: 2rem;
-    font-family: 'Titan One', cursive;
+    font-family: 'Galindo', cursive;
     font-size: 2.5rem;
 }
 
@@ -40,42 +46,41 @@ body {
 }
 
 .form-control:focus {
-    border-color: #1a9c3b;
-    box-shadow: 0 0 0 0.2rem rgba(26, 156, 59, 0.25);
+    border-color: #5AA6A6; 
+    box-shadow: 0 0 0 0.2rem rgba(90, 166, 166, 0.25);
     outline: none;
 }
 
 .btn-success {
-    background-color: #1a9c3b;
+    background-color: #5AA6A6; 
     border: none;
     padding: 14px;
     font-size: 1.2rem;
     font-weight: bold;
     transition: all 0.3s ease;
-    text-transform: uppercase;
     letter-spacing: 1px;
+    border-radius: 20px;
+    font-family: 'Galindo', cursive;
 }
 
 .btn-success:hover {
-    background-color: #147c2f;
+    background-color: #264653; 
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .text-success {
-    color: #1a9c3b !important;
-    text-decoration: none;
+    color: #264653 !important; 
+    text-decoration: underline;
     font-weight: bold;
     transition: all 0.3s ease;
-}
-
-.text-success:hover {
-    text-decoration: underline;
-    color: #147c2f !important;
+    margin-left: 20px; 
 }
 
 .text-center {
     margin-top: 1.5rem;
+    margin-left: 150px; 
+    text-align: right;
 }
 
 .error-message {

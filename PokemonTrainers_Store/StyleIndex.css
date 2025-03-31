@@ -322,8 +322,14 @@ body {
 }
 
 .card-img-container {
-    background-color: #2a9d8f;
-    padding: 100px;
+    background: linear-gradient(to top, #2a9d8f, #ffffff);
+}
+
+.card-img-container img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin: 0 auto;
 }
 
 .card-body {

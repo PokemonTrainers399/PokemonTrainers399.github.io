@@ -1,26 +1,30 @@
 body {
-    background: linear-gradient(135deg, #1a9c3b 0%, #115740 100%);
+    background-image: url('6R0Q1DU.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #fff;
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Galindo', cursive;
+    font-family: 'Alfa Slab One', 'Titan One', sans-serif;
+    padding-bottom: 20px;
 }
 
 .form-container {
     background: white;
-    padding: 2rem;
+    padding: 40px;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
+    margin: 200px auto;
 }
 
 .form-title {
-    color: #1a9c3b;
+    color: #5AA6A6;
     text-align: center;
     margin-bottom: 2rem;
-    font-family: 'Titan One', cursive;
+    font-family: 'Galindo', cursive;
 }
 
 .form-label {
@@ -36,29 +40,34 @@ body {
 }
 
 .form-control:focus {
-    border-color: #1a9c3b;
-    box-shadow: 0 0 0 0.2rem rgba(26, 156, 59, 0.25);
+    border-color: #5AA6A6;
+    box-shadow: 0 0 0 0.2rem rgba(90, 166, 166, 0.25);
 }
 
 .btn-success {
-    background-color: #1a9c3b;
+    background-color: #5AA6A6;
     border: none;
     padding: 12px;
+    font-family: 'Galindo', cursive;
     font-size: 1.1rem;
     font-weight: bold;
     transition: all 0.3s ease;
+    border-radius: 20px;
 }
 
 .btn-success:hover {
-    background-color: #147c2f;
+    background-color: #264653;
     transform: translateY(-2px);
 }
 
 .text-success {
-    color: #1a9c3b !important;
-    text-decoration: none;
+    color: #264653 !important;
 }
 
-.text-success:hover {
-    text-decoration: underline;
+.player-id-message {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #5AA6A6;
 }
