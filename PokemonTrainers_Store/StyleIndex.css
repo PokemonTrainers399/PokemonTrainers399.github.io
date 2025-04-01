@@ -686,3 +686,55 @@ body {
         line-height: 1.2;
     }
 }
+
+/* Add these styles for the sub-navbar */
+.sub-navbar .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+}
+
+.nav-items-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.nav-arrow {
+    background: none;
+    border: none;
+    color: #2a9d8f;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+}
+
+.nav-arrow.prev {
+    left: 0;
+}
+
+.nav-arrow.next {
+    right: 0;
+}
+
+.navbar-nav {
+    transition: transform 0.3s ease;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .nav-items-container {
+        width: calc(100% - 80px);
+    }
+    
+    .navbar-nav {
+        justify-content: flex-start;
+    }
+}
+/* 
