@@ -156,6 +156,11 @@
     text-decoration: underline;
 }
 
+.custom-carousel {
+    position: relative;
+    margin-bottom: 25px;
+}
+
 .custom-carousel .carousel-indicators button {
     background: linear-gradient(to bottom, #ff0000, #ffffff);
     border: none;
