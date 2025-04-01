@@ -6,30 +6,92 @@
     <title>Profile - Pokemon GO Web Store</title>
     <link rel="icon" href="pokeball.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Galindo&family=Titan+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="profile.css">
 </head>
 <body class="body-background">
     <div class="profile-container">
-        <div class="profile-header">
-            <h1 class="profile-title" id="profile-name"></h1>
-            <button class="sign-out-button" onclick="signOut()">Sign Out</button>
-        </div>
-        
-        <div class="trainer-id">
-            ID: <span id="trainer-id"></span>
+
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <div class="logo">
+                <img src="pokeball.png" alt="Logo" width="40">
+                <span>PokePals Web Store</span>
+            </div>
+            <div class="nav-links">
+                <a href="https://tickets.nianticlabs.com/events/#/login?returnUrl=%2Feventlisting&appId=pgo">Event Ticketing</a>
+            </div>
+            <div class="profile-menu">
+                <span class="username" id="profile-name"></span>
+                <button class="sign-out-button" onclick="signOut()">Sign Out</button>
+            </div>
         </div>
 
+        <!-- Profile Card -->
+        <div class="profile-card">
+            <img src="https://favim.com/pd/s11/orig/8/877/8772/87726/overlay-default-png-Favim.com-8772672.jpg" class="avatar" alt="Profile Picture">
+            <div class="profile-details">
+                <div>
+                    <h2 id="profile-username"></h2>
+                    <p>Player ID: <span id="trainer-id"></span></p>
+                </div>
+                <div>
+                    <p>Level: <span id="player-level">1</span></p>
+                    <p>Team: <span id="player-team">Valor</span></p>
+                </div>
+                <div>
+                    <p><img src="https://www.clipartmax.com/png/full/358-3581184_pokecoin-icon-free-download-pokecoin-png.png" alt="" style="width: 20px; height: 20px; margin-right: 5px; margin-bottom: 5px;"><span id="player-coins">100</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Achievements & Friends Section -->
+        <div class="achievements-friends">
+            <div class="card achievements">
+                <h3>Achievements</h3>
+            </div>
+
+            <div class="card friends">
+                <h3>Friends</h3>
+                <div id="friends-list">
+                    <div class="friend">
+                        <img src="https://i.pinimg.com/736x/91/c5/13/91c5133ebfd36c66b776f641cbccaca6.jpg" alt="Friend 1">
+                        <span>Ashe - In Game</span>
+                    </div>
+                    <div class="friend">
+                        <img src="https://i.pinimg.com/236x/b8/85/b8/b885b890a3db1ed568cac58fa714c66f.jpg" alt="Friend 2">
+                        <span>Charizmander - Offline</span>
+                    </div>
+                    <div class="friend">
+                        <img src="https://avatarfiles.alphacoders.com/368/thumb-1920-368521.png" alt="Friend 3">
+                        <span>Bulbasoar - Idle</span>
+                    </div>
+                    <div class="friend">
+                        <img src="https://i.redd.it/rg5nwzhbqdqb1.jpg" alt="Friend 4">
+                        <span>Pickachew - In Game</span>
+                    </div>
+                    <div class="friend">
+                        <img src="https://i.pinimg.com/originals/ae/a9/3e/aea93e46fe813d7762c605d63af928cd.jpg" alt="Friend 5">
+                        <span>Miawth - Offline</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Transaction History -->
         <div class="transaction-history">
-            <h2>Transaction history</h2>
+            <h2>Transaction History</h2>
             <div id="transaction-list">
-                <!-- Transactions will be populated here -->
                 <div class="no-transactions">No transaction history</div>
             </div>
         </div>
 
+        <!-- Store Button -->
         <div class="text-center">
             <a href="userHome.html" class="store-button">Return to Store</a>
         </div>
+
     </div>
 
     <script>
@@ -41,7 +103,11 @@
             }
 
             document.getElementById('profile-name').textContent = currentUser.username;
+            document.getElementById('profile-username').textContent = currentUser.username;
             document.getElementById('trainer-id').textContent = currentUser.userId;
+            document.getElementById('player-level').textContent = currentUser.level || "1";
+            document.getElementById('player-team').textContent = currentUser.team || "Valor";
+            document.getElementById('player-coins').textContent = currentUser.coins || "100";
 
             // Display transaction history if exists
             if (currentUser.purchaseHistory && currentUser.purchaseHistory.length > 0) {
@@ -51,15 +117,14 @@
                 currentUser.purchaseHistory.forEach(purchase => {
                     const purchaseElement = document.createElement('div');
                     purchaseElement.className = 'purchase-item p-3 mb-3 bg-light rounded';
-                    purchaseElement.innerHTML = `
-                        <div class="d-flex justify-content-between align-items-center">
+                    purchaseElement.innerHTML = 
+                        `<div class="d-flex justify-content-between align-items-center">
                             <div>
                                 <h5 class="mb-1">${purchase.name}</h5>
                                 <small class="text-muted">${purchase.date}</small>
                             </div>
                             <span class="price-display">${purchase.price}</span>
-                        </div>
-                    `;
+                        </div>`;
                     transactionList.appendChild(purchaseElement);
                 });
             }
@@ -70,6 +135,7 @@
             window.location.href = 'index.html';
         }
     </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

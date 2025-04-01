@@ -74,7 +74,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 15px;
     position: sticky;
-    top: 50px;
+    top: 30px;
     z-index: 999;
 }
 
@@ -168,7 +168,7 @@
     background-color: #ffffff;
     padding: 15px 0;
     position: sticky;
-    top: calc(50px + 80px);
+    top: 120px; /* Adjusted to make it appear higher when scrolling */
     z-index: 997;
 }
 

@@ -1,73 +1,150 @@
-.profile-container {
-    max-width: 800px;
-    margin: 100px auto;
-    padding: 30px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+/* Global Styles */
+body {
+    font-family: 'Galindo', cursive;
+    background-image: url('6R0Q1DU.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.profile-header {
+/* Main Profile Container */
+.profile-container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 80px auto;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    display: grid;
+    gap: 20px;
+}
+
+/* Navigation Bar */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
-}
-
-.profile-title {
-    font-size: 24px;
-    color: #264653;
-    margin: 0;
-}
-
-.trainer-id {
-    color: #666;
-    font-size: 16px;
-    margin-bottom: 30px;
-}
-
-.transaction-history {
-    margin-top: 40px;
-}
-
-.transaction-history h2 {
-    font-size: 20px;
-    color: #264653;
-    margin-bottom: 20px;
-}
-
-.no-transactions {
-    text-align: center;
-    color: #666;
-    padding: 20px;
-    background-color: #f8f9fa;
+    background: #ffffff;
+    padding: 15px 30px;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.profile-menu {
+    display: flex;
+    align-items: center;
+}
+
+.username {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* Profile Card */
+.profile-card {
+    display: flex;
+    align-items: center;
+    font: 100px;;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profile-details {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-details p {
+    margin: 5px 0;
+    font-size: 20px;
+}
+
+/* Achievements & Friends Layout */
+.achievements-friends {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Achievements */
+.achievements .icons {
+    display: flex;
+    gap: 10px;
+    font-size: 24px;
+}
+
+/* Friends List */
+.friends .friend {
+    display: flex;
+    align-items: center;
+    background: #eee;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.friend img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Buttons */
+.store-button, .sign-out-button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Galindo', cursive;
+    transition: background-color 0.3s;
 }
 
 .store-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #2a9d8f;
+    background-color: #5AA6A6;
     color: white;
     text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s;
-    margin-top: 20px;
 }
 
 .store-button:hover {
-    background-color: #1f7268;
-    color: white;
+    background-color: #264653;
 }
 
 .sign-out-button {
     background-color: #dc3545;
     color: white;
     border: none;
-    padding: 8px 15px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
 }
 
 .sign-out-button:hover {
