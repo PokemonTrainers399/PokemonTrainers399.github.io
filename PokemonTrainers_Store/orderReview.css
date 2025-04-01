@@ -1,4 +1,5 @@
 body {
+    font-family: 'Galindo', cursive;
     background-image: url('6R0Q1DU.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -6,41 +7,38 @@ body {
     background-position: center;
     color: #fff;
     min-height: 100vh;
-    font-family: 'Alfa Slab One', 'Titan One', sans-serif;
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.back-link {
-    background-color: #5AA6A6;
-    color: white;
+.back-to-cart-btn {
+    background-color: transparent;
+    color: #6c757d;
+    border: 2px solid #6c757d;
     padding: 10px 20px;
-    border: none;
-    border-radius: 15px;
+    border-radius: 8px;
     font-size: 1rem;
     font-weight: bold;
-    transition: all 0.3s ease;
+    text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-family: 'Galindo', cursive;
+    width: 100%;
+    display: inline-block;
+    margin-top: 10px;
+    transition: all 0.3s ease;
     text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    position: absolute;
-    top: 15px;
-    left: 15px;
 }
 
-.back-link:hover {
-    background-color: #264653;
+.back-to-cart-btn:hover {
+    background-color: #6c757d;
+    color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(26, 156, 59, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.back-link:active {
+.back-to-cart-btn:active {
     transform: translateY(0);
 }
 
@@ -121,34 +119,29 @@ body {
     font-weight: bold;
 }
 
-.proceed-btn {
+.proceed-to-checkout-btn {
     background-color: #5AA6A6;
     color: white;
-    padding: 14px 28px;
+    padding: 10px 20px;
     border: none;
-    border-radius: 20px;
-    width: 100%;
-    font-size: 1.2rem;
+    border-radius: 6px;
+    font-size: 1rem;
     font-weight: bold;
-    transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-family: 'Galindo', cursive;
+    transition: all 0.3s ease;
+    width: 100%;
 }
 
-.proceed-btn:hover {
+.proceed-to-checkout-btn:hover {
     background-color: #264653;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(26, 156, 59, 0.3);
 }
 
-.proceed-btn:active {
+.proceed-to-checkout-btn:active {
     transform: translateY(0);
-}
-
-hr {
-    margin: 1.5rem 0;
-    border-color: #e0e0e0;
 }
 
 @media (max-width: 576px) {

@@ -1,6 +1,10 @@
 body {
     font-family: 'Galindo', cursive;
-    background-color: #f8f9fa;
+    background-image: url('6R0Q1DU.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 .navbar-brand img {
@@ -29,21 +33,22 @@ body {
 }
 
 .btn-outline-success {
-    border-color: #1a9c3b;
-    color: #1a9c3b;
+    border-color: #5AA6A6;
+    color: #5AA6A6;
 }
 
 .btn-outline-success:hover {
-    background-color: #1a9c3b;
+    background-color: #264653;
+    border-color: #264653;
     color: white;
 }
 
 .btn-success {
-    background-color: #1a9c3b;
-    border-color: #1a9c3b;
+    background-color: #5AA6A6;
+    border-color: #5AA6A6;
 }
 
 .btn-success:hover {
-    background-color: #147c2f;
-    border-color: #147c2f;
+    background-color: #264653;
+    border-color: #264653;
 }

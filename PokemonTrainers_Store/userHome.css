@@ -35,6 +35,22 @@
     z-index: 1000;
 }
 
+.cart-count-badge {
+    background-color: #5AA6A6;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 12px;
+    display: inline-block;
+    text-align: center;
+    min-width: 24px;
+    height: 24px;
+    line-height: 14px;
+    vertical-align: middle;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .navbar {
     background-color: #ffffff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -215,6 +231,10 @@
     width: 5%;
 }
 
+#news-section {
+    scroll-margin-top: 0;
+}
+
 #events-section,
 #item-boxes-section,
 #pokecoins-section {
@@ -391,17 +411,22 @@
     color: #6c757d;
 }
 
-.btn-price {
-    background-color: #264653;
+.price-display {
+    background-color: #2a9d8f;
     color: white;
-    padding: 8px 15px;
-    border-radius: 15px;
-    font-size: 14px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 14px;
     text-decoration: none;
     display: inline-block;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
 }
+
+.price-display:hover {
+    background-color: #1b6f5a;
+    color: white;
+}
+
+
 
 @media (max-width: 576px) {
     .custom-card {
@@ -446,7 +471,7 @@
         margin-bottom: 10px;
     }
 
-    .btn-price {
+    .price-display {
         background-color: #2a9d8f;
         color: white;
         padding: 6px 12px;
@@ -646,20 +671,6 @@
     background-color: #2a9d8f;
     color: white;
     transform: scale(1.1);
-}
-
-.price-display {
-    display: inline-block;
-    padding: 6px 12px;
-    background-color: #198754;
-    color: white;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-}
-
-.price-display:hover {
-    background-color: #157347;
-    transform: scale(1.05);
 }
 
 /* For modal price display */

@@ -215,6 +215,10 @@
     width: 5%;
 }
 
+#news-section {
+    scroll-margin-top: 0;
+}
+
 #events-section,
 #item-boxes-section,
 #pokecoins-section {
