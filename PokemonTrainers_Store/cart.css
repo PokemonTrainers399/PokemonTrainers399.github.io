@@ -1,9 +1,4 @@
 body {
-    background-image: url('6R0Q1DU.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
     font-family: 'Galindo', cursive;
     background-color: #f8f9fa;
 }
@@ -34,22 +29,21 @@ body {
 }
 
 .btn-outline-success {
-    border-color: #5AA6A6;
-    color: #5AA6A6;
+    border-color: #1a9c3b;
+    color: #1a9c3b;
 }
 
 .btn-outline-success:hover {
-    background-color: rgba(8, 29, 94, 0.6);
-    border-color: rgba(8, 29, 94, 0.6);
+    background-color: #1a9c3b;
     color: white;
 }
 
 .btn-success {
-    background-color: #5AA6A6;
-    border-color: #5AA6A6;
+    background-color: #1a9c3b;
+    border-color: #1a9c3b;
 }
 
 .btn-success:hover {
-    background-color: rgba(8, 29, 94, 0.6);
-    border-color: rgba(8, 29, 94, 0.6);
+    background-color: #147c2f;
+    border-color: #147c2f;
 }

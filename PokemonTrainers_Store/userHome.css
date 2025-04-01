@@ -621,3 +621,49 @@
     color: #6c757d;
     margin-bottom: 10px;
 }
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-btn {
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #2a9d8f;
+    color: #2a9d8f;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.cart-btn:hover {
+    background-color: #2a9d8f;
+    color: white;
+    transform: scale(1.1);
+}
+
+.price-display {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #198754;
+    color: white;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.price-display:hover {
+    background-color: #157347;
+    transform: scale(1.05);
+}
+
+/* For modal price display */
+.modal .price-display {
+    margin-right: 10px;
+}
+

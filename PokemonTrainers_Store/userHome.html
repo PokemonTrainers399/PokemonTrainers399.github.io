@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <body class="body-background">
+    <body class="body-background">  
     <div class="top-banner">
         15% discount for your first Web Store purchase on any item $9.99 or more!
     </div>
@@ -138,40 +138,40 @@
         <div class="row justify-content-center">
             <!-- Card 1 -->
             <div class="col-md-4 mb-4">
-                <div class="card text-center custom-card" data-bs-toggle="modal" data-bs-target="#itemBoxModal1">
+                <div class="card text-center custom-card" data-bs-toggle="modal" data-bs-target="#itemBoxModal1" data-item-id="box1">
                     <div class="card-img-container">
                         <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fbundle.general1.rocket.1.png&w=256&q=75" class="card-img-top" alt="Item Box">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Bug Out Ultra Ticket Box</h5>
                         <p class="card-text">Can only be purchased 1 time.</p>
-                        <a href="payment.html" class="btn btn-price"><strong>₱49.00</strong></a>
+                        <span class="price-display"><strong>₱49.00</strong></span>
                     </div>
                 </div>
             </div>
             <!-- Card 2 -->
             <div class="col-md-4 mb-4">
-                <div class="card text-center custom-card" data-bs-toggle="modal" data-bs-target="#itemBoxModal1">
+                <div class="card text-center custom-card" data-bs-toggle="modal" data-bs-target="#itemBoxModal2" data-item-id="box2">
                     <div class="card-img-container">
                         <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fbundle.general1.rocket.1.png&w=256&q=75" class="card-img-top" alt="Item Box">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Bug Out Ultra Ticket Box</h5>
                         <p class="card-text">Can only be purchased 1 time.</p>
-                        <a href="payment.html" class="btn btn-price"><strong>₱49.00</strong></a>
+                        <span class="price-display"><strong>₱49.00</strong></span>
                     </div>
                 </div>
             </div>
             <!-- Card 3 -->
             <div class="col-md-4 mb-4">
-                <div class="card text-center custom-card" data-bs-toggle="modal" data-bs-target="#itemBoxModal1">
+                <div class="card text-center custom-card" data-bs-toggle="modal" data-bs-target="#itemBoxModal3" data-item-id="box3">
                     <div class="card-img-container">
                         <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fbundle.general1.rocket.1.png&w=256&q=75" class="card-img-top" alt="Item Box">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Bug Out Ultra Ticket Box</h5>
                         <p class="card-text">Can only be purchased 1 time.</p>
-                        <a href="payment.html" class="btn btn-price"><strong>₱49.00</strong></a>
+                        <span class="price-display"><strong>₱49.00</strong></span>
                     </div>
                 </div>
             </div>
@@ -196,12 +196,17 @@
                     <li><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_paid_raid_ticket.png&w=96&q=75" alt="Premium Battle Pass" class="icon"> x7 Premium Battle Pass</li>
                     <li><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_golden_pinap_berry.png&w=96&q=75" alt="Silver Pinap Berry" class="icon"> x7 Silver Pinap Berry</li>
                 </ul>
-                <a href="payment.html" class="btn btn-price mt-3"><strong>₱49.00</strong></a>
+                <div class="modal-buttons">
+                    <button class="btn btn-price"><strong>₱49.00</strong></button>
+                    <button class="btn cart-btn" onclick="addToCart(this)">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<div class="modal fade" id="itemBoxModal1" tabindex="-1" aria-labelledby="itemBoxModal1Label" aria-hidden="true">
+<div class="modal fade" id="itemBoxModal2" tabindex="-1" aria-labelledby="itemBoxModal1Label" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content custom-modal">
             <div class="modal-header border-0">
@@ -219,12 +224,17 @@
                     <li><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_paid_raid_ticket.png&w=96&q=75" alt="Premium Battle Pass" class="icon"> x7 Premium Battle Pass</li>
                     <li><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_golden_pinap_berry.png&w=96&q=75" alt="Silver Pinap Berry" class="icon"> x7 Silver Pinap Berry</li>
                 </ul>
-                <a href="payment.html" class="btn btn-price mt-3"><strong>₱49.00</strong></a>
+                <div class="modal-buttons">
+                    <button class="btn btn-price"><strong>₱49.00</strong></button>
+                    <button class="btn cart-btn" onclick="addToCart(this)">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<div class="modal fade" id="itemBoxModal1" tabindex="-1" aria-labelledby="itemBoxModal1Label" aria-hidden="true">
+<div class="modal fade" id="itemBoxModal3" tabindex="-1" aria-labelledby="itemBoxModal1Label" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content custom-modal">
             <div class="modal-header border-0">
@@ -242,30 +252,12 @@
                     <li><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_paid_raid_ticket.png&w=96&q=75" alt="Premium Battle Pass" class="icon"> x7 Premium Battle Pass</li>
                     <li><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_golden_pinap_berry.png&w=96&q=75" alt="Silver Pinap Berry" class="icon"> x7 Silver Pinap Berry</li>
                 </ul>
-                <a href="payment.html" class="btn btn-price mt-3"><strong>₱49.00</strong></a>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="itemBoxModal1" tabindex="-1" aria-labelledby="itemBoxModal1Label" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content custom-modal">
-            <div class="modal-header border-0">
-                <h5 class="modal-title" id="itemBoxModal1Label">Bug Out Ultra Ticket Box</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center">
-                <p class="text-muted">Can only be purchased 1 time</p>
-                <div class="modal-image-container">
-                    <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fbundle.general1.rocket.1.png&w=256&q=75" alt="Item Box" class="img-fluid mb-3">
+                <div class="modal-buttons">
+                    <button class="btn btn-price"><strong>₱49.00</strong></button>
+                    <button class="btn cart-btn" onclick="addToCart(this)">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
                 </div>
-                <ul class="list-unstyled modal-item-list">
-                    <li><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_ultra_ball.png&w=96&q=75" alt="Ultra Ball" class="icon"> x7 Ultra Ball</li>
-                    <li><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_leader_map.png&w=96&q=75" alt="Rocket Radar" class="icon"> x7 Ro    cket Radar</li>
-                    <li><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_paid_raid_ticket.png&w=96&q=75" alt="Premium Battle Pass" class="icon"> x7 Premium Battle Pass</li>
-                    <li><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_golden_pinap_berry.png&w=96&q=75" alt="Silver Pinap Berry" class="icon"> x7 Silver Pinap Berry</li>
-                </ul>
-                <a href="payment.html" class="btn btn-price mt-3"><strong>₱49.00</strong></a>
             </div>
         </div>
     </div>
@@ -277,37 +269,37 @@
             <div class="row justify-content-center">
                 <!-- Card 1 -->
                 <div class="col-md-4 mb-4">
-                    <div class="card text-center custom-card" data-bs-toggle="modal" data-bs-target="#pokeCoinsModal1">
+                    <div class="card text-center custom-card" data-bs-toggle="modal" data-bs-target="#pokeCoinsModal1" data-item-id="coins1">
                         <div class="card-img-container">
                             <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fcoin-bundle-xxsmall.png&w=384&q=75" class="card-img-top" alt="PokeCoins">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">110 PokéCoins</h5>
-                            <a href="payment.html" class="btn btn-price"><strong>₱29.00</strong></a>
+                            <span class="price-display"><strong>₱29.00</strong></span>
                         </div>
                     </div>
                 </div>
             <!-- Card 2 -->
             <div class="col-md-4 mb-4">
-                <div class="card text-center custom-card" data-bs-toggle="modal" data-bs-target="#pokeCoinsModal1">
+                <div class="card text-center custom-card" data-bs-toggle="modal" data-bs-target="#pokeCoinsModal2" data-item-id="coins2">
                     <div class="card-img-container">
                         <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fcoin-bundle-xxsmall.png&w=384&q=75" class="card-img-top" alt="PokeCoins">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">110 PokéCoins</h5>
-                        <a href="payment.html" class="btn btn-price"><strong>₱29.00</strong></a>
+                        <span class="price-display"><strong>₱29.00</strong></span>
                     </div>
                 </div>
             </div>
             <!-- Card 3 -->
             <div class="col-md-4 mb-4">
-                <div class="card text-center custom-card" data-bs-toggle="modal" data-bs-target="#pokeCoinsModal1">
+                <div class="card text-center custom-card" data-bs-toggle="modal" data-bs-target="#pokeCoinsModal3" data-item-id="coins3">
                     <div class="card-img-container">
                         <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fcoin-bundle-xxsmall.png&w=384&q=75" class="card-img-top" alt="PokeCoins">
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">110 PokéCoins</h5>
-                        <a href="payment.html" class="btn btn-price"><strong>₱29.00</strong></a>
+                        <span class="price-display"><strong>₱29.00</strong></span>
                     </div>
                 </div>
             </div>
@@ -323,15 +315,20 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body text-center">
-                        <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fcoin-bundle-xxsmall.png&w=384&q=75" alt="PokeCoins" class="img-fluid mb-3">
+                        <img src="https://store.pokemongolive.com/_next/image?url=https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/coin-bundle-xxsmall.png&w=384&q=75" alt="PokeCoins" class="img-fluid mb-3">
                         <p class="card-text">10 Web Store Bonus Coins</p>
                         <p class="card-text">100 + 10 Web Store Bonus = 110 total PokéCoins.</p>
-                        <a href="payment.html" class="btn btn-price mt-3"><strong>₱29.00</strong></a>
+                        <div class="modal-buttons">
+                            <button class="btn btn-price"><strong>₱29.00</strong></button>
+                            <button class="btn cart-btn" onclick="addToCart(this)">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="pokeCoinsModal1" tabindex="-1" aria-labelledby="pokeCoinsModal1Label" aria-hidden="true">
+        <div class="modal fade" id="pokeCoinsModal2" tabindex="-1" aria-labelledby="pokeCoinsModal1Label" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content custom-modal">
                     <div class="modal-header border-0">
@@ -339,15 +336,20 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body text-center">
-                        <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fcoin-bundle-xxsmall.png&w=384&q=75" alt="PokeCoins" class="img-fluid mb-3">
+                        <img src="https://store.pokemongolive.com/_next/image?url=https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/coin-bundle-xxsmall.png&w=384&q=75" alt="PokeCoins" class="img-fluid mb-3">
                         <p class="card-text">10 Web Store Bonus Coins</p>
                         <p class="card-text">100 + 10 Web Store Bonus = 110 total PokéCoins.</p>
-                        <a href="payment.html" class="btn btn-price mt-3"><strong>₱29.00</strong></a>
+                        <div class="modal-buttons">
+                            <button class="btn btn-price"><strong>₱29.00</strong></button>
+                            <button class="btn cart-btn" onclick="addToCart(this)">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    <div class="modal fade" id="pokeCoinsModal1" tabindex="-1" aria-labelledby="pokeCoinsModal1Label" aria-hidden="true">
+    <div class="modal fade" id="pokeCoinsModal3" tabindex="-1" aria-labelledby="pokeCoinsModal1Label" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content custom-modal">
             <div class="modal-header border-0">
@@ -355,10 +357,15 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body text-center">
-                <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fcoin-bundle-xxsmall.png&w=384&q=75" alt="PokeCoins" class="img-fluid mb-3">
+                <img src="https://store.pokemongolive.com/_next/image?url=https://storage.googleapis.com/platform-webstore-rel-assets/pgo/sku_assets/coin-bundle-xxsmall.png&w=384&q=75" alt="PokeCoins" class="img-fluid mb-3">
                 <p class="card-text">10 Web Store Bonus Coins</p>
                 <p class="card-text">100 + 10 Web Store Bonus = 110 total PokéCoins.</p>
-                <a href="payment.html" class="btn btn-price mt-3"><strong>₱29.00</strong></a>
+                <div class="modal-buttons">
+                    <button class="btn btn-price"><strong>₱29.00</strong></button>
+                    <button class="btn cart-btn" onclick="addToCart(this)">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -380,6 +387,38 @@
                 localStorage.removeItem('currentUser');
                 window.location.href = 'index.html';
             });
+
+            // Add to cart functionality for all product cards
+            document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const card = button.closest('.card');
+                    const item = {
+                        name: card.querySelector('.card-title').textContent,
+                        description: card.querySelector('.card-text')?.textContent || '',
+                        price: button.querySelector('strong').textContent,
+                        image: card.querySelector('img').src
+                    };
+
+                    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+                    cartItems.push(item);
+                    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                    
+                    updateCartCount();
+                    alert('Item added to cart!');
+                });
+            });
+
+            // Update cart count
+            function updateCartCount() {
+                const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+                document.getElementById('cart-count').textContent = cartItems.length;
+            }
+
+            // Initialize cart count
+            updateCartCount();
         });
     </script>
 
@@ -388,7 +427,7 @@
     // Function to store item details and redirect to payment
     function goToPayment(item) {
         localStorage.setItem('selectedItem', JSON.stringify(item));
-        window.location.href = 'payment.html';
+        window.location.href = 'orderReview.html';  // Updated from payment.html
     }
 
     // Add click handlers to all product cards
@@ -456,6 +495,125 @@
         // Initialize cart count
         updateCartCount();
     });
+</script>
+<script>
+    function addToCart(button) {
+    const modal = button.closest('.modal');
+    const card = document.querySelector(`[data-bs-target="#${modal.id}"]`);
+    const itemId = card.getAttribute('data-item-id');
+    const isPokeCoins = itemId.startsWith('coins');
+    
+    const item = {
+        id: itemId,
+        name: modal.querySelector('.modal-title').textContent,
+        description: modal.querySelector('.card-text')?.textContent || '',
+        price: modal.querySelector('.btn-price strong').textContent,
+        image: modal.querySelector('.img-fluid').src,
+        type: isPokeCoins ? 'pokecoins' : 'itembox'
+    };
+
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    
+    // Only check for duplicates if it's an item box
+    if (!isPokeCoins) {
+        const itemExists = cartItems.some(cartItem => cartItem.id === itemId);
+        
+        if (itemExists) {
+            const toast = document.createElement('div');
+            toast.className = 'position-fixed bottom-0 end-0 p-3';
+            toast.style.zIndex = '9999';
+            toast.innerHTML = `
+                <div class="toast show bg-danger text-white">
+                    <div class="toast-body">
+                        This item can only be purchased once!
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 2000);
+            return;
+        }
+    }
+
+    cartItems.push(item);
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    
+    const cartCount = document.getElementById('cart-count');
+    if (cartCount) {
+        cartCount.textContent = cartItems.length;
+    }
+
+    const toast = document.createElement('div');
+    toast.className = 'position-fixed bottom-0 end-0 p-3';
+    toast.style.zIndex = '9999';
+    toast.innerHTML = `
+        <div class="toast show bg-success text-white">
+            <div class="toast-body">
+                Item added to cart successfully!
+            </div>
+        </div>
+    `;
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 2000);
+}
+</script>
+
+<script>
+    document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const card = button.closest('.card');
+        const itemId = card.getAttribute('data-item-id');
+        const item = {
+            id: itemId,
+            name: card.querySelector('.card-title').textContent,
+            description: card.querySelector('.card-text')?.textContent || '',
+            price: button.querySelector('strong').textContent,
+            image: card.querySelector('img').src
+        };
+
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        
+        // Check if this specific item is already in cart
+        const itemExists = cartItems.some(cartItem => cartItem.id === itemId);
+        
+        if (itemExists) {
+            const toast = document.createElement('div');
+            toast.className = 'position-fixed bottom-0 end-0 p-3';
+            toast.style.zIndex = '9999';
+            toast.innerHTML = `
+                <div class="toast show bg-danger text-white">
+                    <div class="toast-body">
+                        This item can only be purchased once!
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 2000);
+            return;
+        }
+
+        cartItems.push(item);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        
+        updateCartCount();
+        
+        const toast = document.createElement('div');
+        toast.className = 'position-fixed bottom-0 end-0 p-3';
+        toast.style.zIndex = '9999';
+        toast.innerHTML = `
+            <div class="toast show bg-success text-white">
+                <div class="toast-body">
+                    Item added to cart successfully!
+                </div>
+            </div>
+        `;
+        document.body.appendChild(toast);
+        setTimeout(() => toast.remove(), 2000);
+    });
+});
 </script>
 </body>
 </html>

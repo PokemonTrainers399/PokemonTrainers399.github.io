@@ -54,7 +54,14 @@
                         <strong>Total</strong>
                         <strong id="total">₱0.00</strong>
                     </div>
-                    <button id="checkout-btn" class="btn btn-success w-100">Proceed to Checkout</button>
+                    <!-- In the Order Summary card, update the checkout button -->
+                    <button class="btn btn-success w-100" onclick="proceedToOrderReview()">Proceed to Order Review</button>
+                    
+                    <script>
+                        function proceedToOrderReview() {
+                            window.location.href = 'orderReview.html';
+                        }
+                    </script>
                 </div>
             </div>
         </div>
