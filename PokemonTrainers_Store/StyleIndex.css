@@ -156,13 +156,8 @@
     text-decoration: underline;
 }
 
-.custom-carousel {
-    position: relative;
-    margin-bottom: 25px;
-}
-
 .custom-carousel .carousel-indicators button {
-    background-color: #007bff;
+    background: linear-gradient(to bottom, #ff0000, #ffffff);
     border: none;
     width: 20px;
     height: 20px;
@@ -172,12 +167,27 @@
 }
 
 .custom-carousel .carousel-indicators .active {
-    background-image: url('pokeball-icon-512x512-gg20zbmv.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background: linear-gradient(to bottom, #ff0000, #ffffff), url('pokeball-icon-512x512-gg20zbmv.png');
+    background-size: cover, contain;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
     width: 25px;
     height: 25px;
+    position: relative;
+}
+
+.custom-carousel .carousel-indicators .active::after {
+    content: '';
+    background: url('pokeball-icon-512x512-gg20zbmv.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
 }
 
 .custom-carousel .carousel-inner {
