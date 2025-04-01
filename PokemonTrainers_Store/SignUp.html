@@ -52,15 +52,10 @@
         // Store users in localStorage
         let users = JSON.parse(localStorage.getItem('users')) || [];
 
-        confirmPassword.addEventListener('input', () => {
-            if (password.value !== confirmPassword.value) {
-                passwordError.style.display = 'block';
-                confirmPassword.setCustomValidity('Passwords do not match');
-            } else {
-                passwordError.style.display = 'none';
-                confirmPassword.setCustomValidity('');
-            }
-        });
+        function generateUserId() {
+            const numbers = Array.from({length: 12}, () => Math.floor(Math.random() * 10));
+            return `${numbers.slice(0,4).join('')} ${numbers.slice(4,8).join('')} ${numbers.slice(8,12).join('')}`;
+        }
 
         signUpForm.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -70,10 +65,12 @@
                 return;
             }
 
+            const userId = generateUserId();
             const newUser = {
                 username: document.getElementById('username').value,
                 email: document.getElementById('email').value,
-                password: document.getElementById('password').value
+                password: document.getElementById('password').value,
+                userId: userId
             };
 
             // Check if username or email already exists
@@ -91,9 +88,21 @@
             users.push(newUser);
             localStorage.setItem('users', JSON.stringify(users));
 
-            alert('Account created successfully!');
+            // Show user their ID before redirecting
+            alert(`Your Trainer ID is: ${userId}\nPlease keep this for your records.`);
             window.location.href = 'SignIn.html';
         });
+
+        confirmPassword.addEventListener('input', () => {
+            if (password.value !== confirmPassword.value) {
+                passwordError.style.display = 'block';
+                confirmPassword.setCustomValidity('Passwords do not match');
+            } else {
+                passwordError.style.display = 'none';
+                confirmPassword.setCustomValidity('');
+            }
+        });
     </script>
+    
 </body>
 </html>

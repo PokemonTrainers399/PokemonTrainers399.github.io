@@ -1,0 +1,75 @@
+.profile-container {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.profile-title {
+    font-size: 24px;
+    color: #264653;
+    margin: 0;
+}
+
+.trainer-id {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.transaction-history {
+    margin-top: 40px;
+}
+
+.transaction-history h2 {
+    font-size: 20px;
+    color: #264653;
+    margin-bottom: 20px;
+}
+
+.no-transactions {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+
+.store-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2a9d8f;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.store-button:hover {
+    background-color: #1f7268;
+    color: white;
+}
+
+.sign-out-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sign-out-button:hover {
+    background-color: #bb2d3b;
+}

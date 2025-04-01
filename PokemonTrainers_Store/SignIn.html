@@ -40,21 +40,14 @@
 
         signInForm.addEventListener('submit', (e) => {
             e.preventDefault();
-
+            
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
 
-            // Get stored users
             const users = JSON.parse(localStorage.getItem('users')) || [];
-
-            // Find matching user
-            const user = users.find(u => 
-                (u.username === username || u.email === username) && 
-                u.password === password
-            );
+            const user = users.find(u => u.username === username && u.password === password);
 
             if (user) {
-                // Store current user info
                 localStorage.setItem('currentUser', JSON.stringify(user));
                 window.location.href = 'userHome.html';
             } else {

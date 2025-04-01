@@ -24,8 +24,7 @@
                         <span id="username-display">Loading...</span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li><a class="dropdown-item" href="#">Purchase History</a></li>
+                        <li><a class="dropdown-item" href="profile.html">Profile</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#" id="signOutBtn">Sign Out</a></li>
                     </ul>
@@ -54,7 +53,7 @@
                         <strong>Total</strong>
                         <strong id="total">₱0.00</strong>
                     </div>
-                    <!-- In the Order Summary card, update the checkout button -->
+                    <!-- Updated checkout button -->
                     <button class="btn btn-success w-100" onclick="proceedToOrderReview()">Proceed to Order Review</button>
                     
                     <script>
@@ -83,7 +82,7 @@
             updateTotals(cartItems);
 
             // Checkout button handler
-            document.getElementById('checkout-btn').addEventListener('click', () => {
+            document.getElementById('checkout-btn')?.addEventListener('click', () => {
                 if (cartItems.length === 0) {
                     alert('Your cart is empty!');
                     return;
