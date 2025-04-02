@@ -20,6 +20,7 @@
     text-shadow: 0 0 0 #000000, 3.5px 0 0 #000080, -3.5px 0 0 #000080, 0 3.5px 0 #000080, 0 -3.5px 0 #000080, 3.5px 3.5px 0 #000080, -3.5px -3.5px 0 #000080, 3.5px -3.5px 0 #000080, -3.5px 3.5px 0 #000080, 2px 2px 6px rgba(0, 0, 0, 0.5), 4px 4px 8px rgba(0, 0, 0, 0.7);
 }
 
+
 .top-banner {
     background-color: #5AA6A6;
     color: white;
@@ -781,4 +782,21 @@ body {
         justify-content: flex-start;
     }
 }
-/* 
+
+footer a {
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+footer a:hover {
+    opacity: 0.8;
+}
+
+footer h5 {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+footer .list-unstyled li {
+    margin-bottom: 10px;
+}

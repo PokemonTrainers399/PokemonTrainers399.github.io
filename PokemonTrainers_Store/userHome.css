@@ -841,3 +841,20 @@
     }
 }
 
+footer a {
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+footer a:hover {
+    opacity: 0.8;
+}
+
+footer h5 {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+footer .list-unstyled li {
+    margin-bottom: 10px;
+}
